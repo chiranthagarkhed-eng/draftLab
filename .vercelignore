@@ -1,0 +1,24 @@
+# DraftLab — what NOT to upload to Vercel.
+# Vercel only needs the Next.js project in web/. The data/ folder is a
+# Python ingestion + stats pipeline that's run locally; the only output that
+# matters to the deployed app (stats.json, champion_meta.json) is already
+# copied into web/public/ by run_pipeline.py.
+
+# Big binary artifacts from the local pipeline
+data/matches.db
+data/matches.db-journal
+data/__pycache__/
+data/venv/
+
+# Python source (not run on Vercel)
+data/*.py
+data/_reference/
+
+# Local-only secrets
+data/.env
+.env
+.env.local
+
+# Generated docs / scratch
+*.log
+*.bak

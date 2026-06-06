@@ -1,0 +1,22 @@
+# Repo-root catch-all. Each subproject (data/, web/) has its own .gitignore
+# for stack-specific things; this catches everything else.
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local-only secrets at the root (just in case)
+.env
+.env.local
+
+# Local scratch / experiments
+*.log
+*.bak
+/tmp/
+/scratch/
+
+# Vercel
+.vercel

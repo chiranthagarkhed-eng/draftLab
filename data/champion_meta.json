@@ -1,0 +1,1683 @@
+{
+  "patch": "16.10.1",
+  "champions": {
+    "Aatrox": {
+      "name": "Aatrox",
+      "tags": [
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Ahri": {
+      "name": "Ahri",
+      "tags": [
+        "Mage",
+        "Assassin"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Akali": {
+      "name": "Akali",
+      "tags": [
+        "Assassin"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Akshan": {
+      "name": "Akshan",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Alistar": {
+      "name": "Alistar",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Ambessa": {
+      "name": "Ambessa",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Amumu": {
+      "name": "Amumu",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Anivia": {
+      "name": "Anivia",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Annie": {
+      "name": "Annie",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Aphelios": {
+      "name": "Aphelios",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Ashe": {
+      "name": "Ashe",
+      "tags": [
+        "Marksman",
+        "Support"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "AurelionSol": {
+      "name": "Aurelion Sol",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Aurora": {
+      "name": "Aurora",
+      "tags": [
+        "Mage",
+        "Assassin"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Azir": {
+      "name": "Azir",
+      "tags": [
+        "Mage",
+        "Marksman"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Bard": {
+      "name": "Bard",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Belveth": {
+      "name": "Bel'Veth",
+      "tags": [
+        "Fighter"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Blitzcrank": {
+      "name": "Blitzcrank",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Brand": {
+      "name": "Brand",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Braum": {
+      "name": "Braum",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Briar": {
+      "name": "Briar",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Caitlyn": {
+      "name": "Caitlyn",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Camille": {
+      "name": "Camille",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Cassiopeia": {
+      "name": "Cassiopeia",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Chogath": {
+      "name": "Cho'Gath",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Corki": {
+      "name": "Corki",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Darius": {
+      "name": "Darius",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Diana": {
+      "name": "Diana",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Draven": {
+      "name": "Draven",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "DrMundo": {
+      "name": "Dr. Mundo",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Ekko": {
+      "name": "Ekko",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Elise": {
+      "name": "Elise",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Evelynn": {
+      "name": "Evelynn",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Ezreal": {
+      "name": "Ezreal",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Fiddlesticks": {
+      "name": "Fiddlesticks",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Fiora": {
+      "name": "Fiora",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Fizz": {
+      "name": "Fizz",
+      "tags": [
+        "Assassin",
+        "Fighter"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Galio": {
+      "name": "Galio",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Gangplank": {
+      "name": "Gangplank",
+      "tags": [
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Garen": {
+      "name": "Garen",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Gnar": {
+      "name": "Gnar",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Gragas": {
+      "name": "Gragas",
+      "tags": [
+        "Fighter",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Graves": {
+      "name": "Graves",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Gwen": {
+      "name": "Gwen",
+      "tags": [
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Hecarim": {
+      "name": "Hecarim",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Heimerdinger": {
+      "name": "Heimerdinger",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Hwei": {
+      "name": "Hwei",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Illaoi": {
+      "name": "Illaoi",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Irelia": {
+      "name": "Irelia",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Ivern": {
+      "name": "Ivern",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Janna": {
+      "name": "Janna",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "JarvanIV": {
+      "name": "Jarvan IV",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Jax": {
+      "name": "Jax",
+      "tags": [
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Jayce": {
+      "name": "Jayce",
+      "tags": [
+        "Fighter",
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Jhin": {
+      "name": "Jhin",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Jinx": {
+      "name": "Jinx",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Kaisa": {
+      "name": "Kai'Sa",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Kalista": {
+      "name": "Kalista",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Karma": {
+      "name": "Karma",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Karthus": {
+      "name": "Karthus",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Kassadin": {
+      "name": "Kassadin",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Katarina": {
+      "name": "Katarina",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Kayle": {
+      "name": "Kayle",
+      "tags": [
+        "Mage",
+        "Marksman"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Kayn": {
+      "name": "Kayn",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Kennen": {
+      "name": "Kennen",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Khazix": {
+      "name": "Kha'Zix",
+      "tags": [
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Kindred": {
+      "name": "Kindred",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Kled": {
+      "name": "Kled",
+      "tags": [
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "KogMaw": {
+      "name": "Kog'Maw",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "KSante": {
+      "name": "K'Sante",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Leblanc": {
+      "name": "LeBlanc",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "LeeSin": {
+      "name": "Lee Sin",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Leona": {
+      "name": "Leona",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Lillia": {
+      "name": "Lillia",
+      "tags": [
+        "Fighter",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": true
+    },
+    "Lissandra": {
+      "name": "Lissandra",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Lucian": {
+      "name": "Lucian",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Lulu": {
+      "name": "Lulu",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Lux": {
+      "name": "Lux",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Malphite": {
+      "name": "Malphite",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Malzahar": {
+      "name": "Malzahar",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Maokai": {
+      "name": "Maokai",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "MasterYi": {
+      "name": "Master Yi",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Mel": {
+      "name": "Mel",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Milio": {
+      "name": "Milio",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "MissFortune": {
+      "name": "Miss Fortune",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "MonkeyKing": {
+      "name": "Wukong",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Mordekaiser": {
+      "name": "Mordekaiser",
+      "tags": [
+        "Fighter",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Morgana": {
+      "name": "Morgana",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Naafiri": {
+      "name": "Naafiri",
+      "tags": [
+        "Assassin",
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Nami": {
+      "name": "Nami",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Nasus": {
+      "name": "Nasus",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Nautilus": {
+      "name": "Nautilus",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Neeko": {
+      "name": "Neeko",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Nidalee": {
+      "name": "Nidalee",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Nilah": {
+      "name": "Nilah",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Nocturne": {
+      "name": "Nocturne",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Nunu": {
+      "name": "Nunu & Willump",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Olaf": {
+      "name": "Olaf",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Orianna": {
+      "name": "Orianna",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Ornn": {
+      "name": "Ornn",
+      "tags": [
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Pantheon": {
+      "name": "Pantheon",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Poppy": {
+      "name": "Poppy",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Pyke": {
+      "name": "Pyke",
+      "tags": [
+        "Support",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Qiyana": {
+      "name": "Qiyana",
+      "tags": [
+        "Assassin"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Quinn": {
+      "name": "Quinn",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Rakan": {
+      "name": "Rakan",
+      "tags": [
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Rammus": {
+      "name": "Rammus",
+      "tags": [
+        "Tank"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "RekSai": {
+      "name": "Rek'Sai",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Rell": {
+      "name": "Rell",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Renata": {
+      "name": "Renata Glasc",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Renekton": {
+      "name": "Renekton",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Rengar": {
+      "name": "Rengar",
+      "tags": [
+        "Assassin",
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Riven": {
+      "name": "Riven",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Rumble": {
+      "name": "Rumble",
+      "tags": [
+        "Fighter",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Ryze": {
+      "name": "Ryze",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Samira": {
+      "name": "Samira",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Sejuani": {
+      "name": "Sejuani",
+      "tags": [
+        "Tank"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Senna": {
+      "name": "Senna",
+      "tags": [
+        "Support",
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Seraphine": {
+      "name": "Seraphine",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Sett": {
+      "name": "Sett",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Shaco": {
+      "name": "Shaco",
+      "tags": [
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Shen": {
+      "name": "Shen",
+      "tags": [
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Shyvana": {
+      "name": "Shyvana",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Singed": {
+      "name": "Singed",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Sion": {
+      "name": "Sion",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Sivir": {
+      "name": "Sivir",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Skarner": {
+      "name": "Skarner",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Smolder": {
+      "name": "Smolder",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Sona": {
+      "name": "Sona",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Soraka": {
+      "name": "Soraka",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Swain": {
+      "name": "Swain",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Sylas": {
+      "name": "Sylas",
+      "tags": [
+        "Mage",
+        "Assassin"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Syndra": {
+      "name": "Syndra",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "TahmKench": {
+      "name": "Tahm Kench",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Taliyah": {
+      "name": "Taliyah",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Talon": {
+      "name": "Talon",
+      "tags": [
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Taric": {
+      "name": "Taric",
+      "tags": [
+        "Support",
+        "Tank"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Teemo": {
+      "name": "Teemo",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Thresh": {
+      "name": "Thresh",
+      "tags": [
+        "Support",
+        "Tank"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Tristana": {
+      "name": "Tristana",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Trundle": {
+      "name": "Trundle",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Tryndamere": {
+      "name": "Tryndamere",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "TwistedFate": {
+      "name": "Twisted Fate",
+      "tags": [
+        "Mage",
+        "Marksman"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Twitch": {
+      "name": "Twitch",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Udyr": {
+      "name": "Udyr",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Urgot": {
+      "name": "Urgot",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": true
+    },
+    "Varus": {
+      "name": "Varus",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Vayne": {
+      "name": "Vayne",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Veigar": {
+      "name": "Veigar",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Velkoz": {
+      "name": "Vel'Koz",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Vex": {
+      "name": "Vex",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Vi": {
+      "name": "Vi",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Viego": {
+      "name": "Viego",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Viktor": {
+      "name": "Viktor",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Vladimir": {
+      "name": "Vladimir",
+      "tags": [
+        "Mage",
+        "Fighter"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": true
+    },
+    "Volibear": {
+      "name": "Volibear",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Warwick": {
+      "name": "Warwick",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Xayah": {
+      "name": "Xayah",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Xerath": {
+      "name": "Xerath",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "XinZhao": {
+      "name": "Xin Zhao",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Yasuo": {
+      "name": "Yasuo",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Yone": {
+      "name": "Yone",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Yorick": {
+      "name": "Yorick",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Yunara": {
+      "name": "Yunara",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Yuumi": {
+      "name": "Yuumi",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Zaahen": {
+      "name": "Zaahen",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Zac": {
+      "name": "Zac",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "damage_type": "AP",
+      "is_frontline": true,
+      "is_ranged": false
+    },
+    "Zed": {
+      "name": "Zed",
+      "tags": [
+        "Assassin"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": false
+    },
+    "Zeri": {
+      "name": "Zeri",
+      "tags": [
+        "Marksman"
+      ],
+      "damage_type": "AD",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Ziggs": {
+      "name": "Ziggs",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Zilean": {
+      "name": "Zilean",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Zoe": {
+      "name": "Zoe",
+      "tags": [
+        "Mage"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    },
+    "Zyra": {
+      "name": "Zyra",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "damage_type": "AP",
+      "is_frontline": false,
+      "is_ranged": true
+    }
+  }
+}
