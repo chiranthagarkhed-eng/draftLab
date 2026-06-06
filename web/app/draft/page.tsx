@@ -2,9 +2,13 @@ import { Suspense } from "react";
 import DraftBoard from "@/components/DraftBoard";
 import PoolHeaderLink from "@/components/PoolHeaderLink";
 
-// DraftBoard uses useSearchParams() to hydrate state from the URL. In Next.js
-// 13+ that hook needs a Suspense boundary above it, otherwise the production
-// build bails out of static rendering for this route.
+// DraftBoard hydrates its state from window.location's search params via
+// useSearchParams(). On Next.js 15/16 the production prerender pass can't
+// reason about a URL it doesn't yet know, so we tell Next.js to skip
+// pre-rendering this route entirely and just render it per-request. The
+// page is interactive-only anyway — there's nothing to gain from SSG here.
+export const dynamic = "force-dynamic";
+
 export default function DraftPage() {
   return (
     <main className="min-h-screen bg-zinc-950 text-zinc-100 p-3 sm:p-6">
