@@ -4,7 +4,7 @@ A personalized, transparent League of Legends draft assistant for solo queue
 players. Tells you the best pick you can actually play, with confidence we
 actually have.
 
-**Demo:** *coming soon (deploy in progress)*
+**Demo:** draftlab-lol.vercel.app 
 
 ---
 
