@@ -60,6 +60,10 @@ export interface Recommendation {
   score: number;
   base_winrate: number;
   base_games: number;
+  /** Fraction of all picks at this role that go to this champion. 0..1. */
+  pick_rate: number;
+  /** sqrt(pick_rate / META_PICKRATE_REFERENCE), clamped to 1. <1 = off-meta. */
+  meta_factor: number;
   matchup_delta: number;
   synergy_delta: number;
   composition_delta: number;
@@ -125,6 +129,17 @@ function roleInteractionWeight(roleA: Role, roleB: Role): number {
   return ROLE_INTERACTION_WEIGHTS[key] ?? 0.3;
 }
 
+/**
+ * Pick-rate threshold below which we treat a (champion, role) as off-meta
+ * and shrink its base contribution. A 0.5% pick rate means that role-slot
+ * draws this champion roughly 1 game in 200 — anyone below that is almost
+ * certainly a one-trick whose winrate is selection-biased.
+ *
+ * Same sqrt(p / ref) shape we use for sample-size shrinkage.
+ */
+const META_PICKRATE_REFERENCE = 0.005;
+const OFF_META_BADGE_THRESHOLD = 0.7; // factor < this → flag in the UI
+
 // Composition penalty weights (winrate-point deltas)
 const COMP_NO_FRONTLINE_PENALTY = -0.04;
 const COMP_DAMAGE_IMBALANCE_PENALTY = -0.02;
@@ -151,6 +166,37 @@ function key4(champA: string, roleA: Role, champB: string, roleB: Role): string 
 
 function synergyKey(a: string, b: string): string {
   return a < b ? `${a}|${b}` : `${b}|${a}`;
+}
+
+/**
+ * Total games seen at each role across all champions. Computed once per
+ * Stats reference and memoized via WeakMap — the engine is pure but stats
+ * objects are stable across renders, so this is essentially free.
+ */
+const roleTotalsCache = new WeakMap<Stats, Record<Role, number>>();
+function roleTotals(stats: Stats): Record<Role, number> {
+  const cached = roleTotalsCache.get(stats);
+  if (cached) return cached;
+  const totals: Record<Role, number> = {
+    TOP: 0, JUNGLE: 0, MIDDLE: 0, BOTTOM: 0, UTILITY: 0,
+  };
+  for (const [key, stat] of Object.entries(stats.champion_role_stats)) {
+    const [, role] = key.split("|") as [string, Role];
+    if (role in totals) totals[role as Role] += stat.games;
+  }
+  roleTotalsCache.set(stats, totals);
+  return totals;
+}
+
+/**
+ * Selection-bias-aware shrinkage. Off-meta picks (Ashe jungle, Yuumi mid)
+ * have winrates that look high because only one-tricks pick them — so we
+ * trust them less for a random player. Returns a multiplier in [0, 1].
+ */
+export function metaFactor(games: number, roleTotal: number): number {
+  if (roleTotal <= 0 || games <= 0) return 1;
+  const pickRate = games / roleTotal;
+  return Math.min(1, Math.sqrt(pickRate / META_PICKRATE_REFERENCE));
 }
 
 // ---------- Composition scoring ----------
@@ -204,11 +250,14 @@ export function evaluateMatchup(
   const blueFilled = blueTeam.filter((s) => s.champion);
   const redFilled = redTeam.filter((s) => s.champion);
 
+  const totals = roleTotals(stats);
+
   for (const slot of blueFilled) {
     if (!slot.champion) continue;
     const stat = stats.champion_role_stats[key2(slot.champion, slot.role)];
     if (stat && stat.games >= MIN_BASE_GAMES) {
-      const d = shrunkDelta(stat.winrate, stat.games);
+      const factor = metaFactor(stat.games, totals[slot.role]);
+      const d = shrunkDelta(stat.winrate, stat.games) * factor;
       blueEdge += d;
       breakdown.base.value += d;
       breakdown.base.games += stat.games;
@@ -219,7 +268,8 @@ export function evaluateMatchup(
     if (!slot.champion) continue;
     const stat = stats.champion_role_stats[key2(slot.champion, slot.role)];
     if (stat && stat.games >= MIN_BASE_GAMES) {
-      const d = shrunkDelta(stat.winrate, stat.games);
+      const factor = metaFactor(stat.games, totals[slot.role]);
+      const d = shrunkDelta(stat.winrate, stat.games) * factor;
       blueEdge -= d;
       breakdown.base.value -= d;
       breakdown.base.games += stat.games;
@@ -332,11 +382,15 @@ export function recommend(
 
   const scored: Recommendation[] = [];
 
+  const totals = roleTotals(stats);
+
   for (const champ of candidates) {
     const baseStat = stats.champion_role_stats[key2(champ, role)];
     if (!baseStat || baseStat.games < MIN_BASE_GAMES) continue;
 
-    const baseDelta = shrunkDelta(baseStat.winrate, baseStat.games);
+    const pickRate = totals[role] > 0 ? baseStat.games / totals[role] : 0;
+    const factor = metaFactor(baseStat.games, totals[role]);
+    const baseDelta = shrunkDelta(baseStat.winrate, baseStat.games) * factor;
 
     let matchupDelta = 0;
     const breakdown: string[] = [];
@@ -402,11 +456,19 @@ export function recommend(
 
     const score = baseDelta + matchupDelta + synergyDelta + compDelta + personalBonus;
 
+    if (factor < OFF_META_BADGE_THRESHOLD) {
+      breakdown.push(
+        `off-meta: ${(pickRate * 100).toFixed(2)}% pick rate → base credit ×${factor.toFixed(2)}`
+      );
+    }
+
     scored.push({
       champion: champ,
       score,
       base_winrate: baseStat.winrate,
       base_games: baseStat.games,
+      pick_rate: pickRate,
+      meta_factor: factor,
       matchup_delta: matchupDelta,
       synergy_delta: synergyDelta,
       composition_delta: compDelta,

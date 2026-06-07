@@ -265,6 +265,14 @@ function RecCard({
           >
             <span>{(rec.base_winrate * 100).toFixed(1)}% base wr</span>
             <ConfidenceBadge games={rec.base_games} compact />
+            {rec.meta_factor < 0.7 && (
+              <span
+                title={`${(rec.pick_rate * 100).toFixed(2)}% pick rate at this role — off-meta picks are usually played by one-tricks, so the engine discounts the winrate by ${Math.round((1 - rec.meta_factor) * 100)}%.`}
+                className="inline-flex items-center px-1.5 py-0.5 rounded border text-[10px] font-mono bg-amber-950/40 text-amber-300 border-amber-700/40"
+              >
+                off-meta · ×{rec.meta_factor.toFixed(2)}
+              </span>
+            )}
           </div>
         </div>
         <div className="text-right shrink-0">
