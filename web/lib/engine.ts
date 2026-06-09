@@ -290,7 +290,16 @@ export function evaluateMatchup(
       const minGames = sameRole ? MIN_MATCHUP_GAMES : MIN_CROSS_ROLE_MATCHUP_GAMES;
       if (stat.games < minGames) continue;
       const weight = roleInteractionWeight(blueSlot.role, redSlot.role);
-      const matchupDelta = shrunkDelta(stat.winrate, stat.games) * weight;
+      // Off-meta dampening: each champion contributes scaled by how much it
+      // belongs in its role. Yuumi top doesn't get full Yuumi-synergies credit.
+      const blueChampBaseGames =
+        stats.champion_role_stats[key2(blueSlot.champion!, blueSlot.role)]?.games ?? 0;
+      const redChampBaseGames =
+        stats.champion_role_stats[key2(redSlot.champion!, redSlot.role)]?.games ?? 0;
+      const blueMeta = metaFactor(blueChampBaseGames, totals[blueSlot.role]);
+      const redMeta = metaFactor(redChampBaseGames, totals[redSlot.role]);
+      const pairMeta = Math.min(blueMeta, redMeta); // weakest link wins
+      const matchupDelta = shrunkDelta(stat.winrate, stat.games) * weight * pairMeta;
       blueEdge += matchupDelta;
       breakdown.matchups.value += matchupDelta;
       breakdown.matchups.games += stat.games;
@@ -303,7 +312,15 @@ export function evaluateMatchup(
       const b = blueFilled[j].champion!;
       const stat = stats.synergy_stats[synergyKey(a, b)];
       if (stat && stat.games >= MIN_SYNERGY_GAMES) {
-        const syn = shrunkDelta(stat.winrate, stat.games);
+        const aGames =
+          stats.champion_role_stats[key2(a, blueFilled[i].role)]?.games ?? 0;
+        const bGames =
+          stats.champion_role_stats[key2(b, blueFilled[j].role)]?.games ?? 0;
+        const pairMeta = Math.min(
+          metaFactor(aGames, totals[blueFilled[i].role]),
+          metaFactor(bGames, totals[blueFilled[j].role])
+        );
+        const syn = shrunkDelta(stat.winrate, stat.games) * pairMeta;
         blueEdge += syn;
         breakdown.synergies.value += syn;
         breakdown.synergies.games += stat.games;
@@ -316,7 +333,15 @@ export function evaluateMatchup(
       const b = redFilled[j].champion!;
       const stat = stats.synergy_stats[synergyKey(a, b)];
       if (stat && stat.games >= MIN_SYNERGY_GAMES) {
-        const syn = shrunkDelta(stat.winrate, stat.games);
+        const aGames =
+          stats.champion_role_stats[key2(a, redFilled[i].role)]?.games ?? 0;
+        const bGames =
+          stats.champion_role_stats[key2(b, redFilled[j].role)]?.games ?? 0;
+        const pairMeta = Math.min(
+          metaFactor(aGames, totals[redFilled[i].role]),
+          metaFactor(bGames, totals[redFilled[j].role])
+        );
+        const syn = shrunkDelta(stat.winrate, stat.games) * pairMeta;
         blueEdge -= syn;
         breakdown.synergies.value -= syn;
         breakdown.synergies.games += stat.games;
@@ -403,7 +428,13 @@ export function recommend(
       const minGames = sameRole ? MIN_MATCHUP_GAMES : MIN_CROSS_ROLE_MATCHUP_GAMES;
       if (ms.games < minGames) continue;
       const weight = roleInteractionWeight(role, enemy.role);
-      const d = shrunkDelta(ms.winrate, ms.games) * weight;
+      // Candidate's meta factor already computed above as `factor`.
+      // Also dampen by the enemy's meta factor — symmetric treatment.
+      const enemyGames =
+        stats.champion_role_stats[key2(enemy.champion, enemy.role)]?.games ?? 0;
+      const enemyMeta = metaFactor(enemyGames, totals[enemy.role]);
+      const pairMeta = Math.min(factor, enemyMeta);
+      const d = shrunkDelta(ms.winrate, ms.games) * weight * pairMeta;
       matchupDelta += d;
       if (Math.abs(d) >= 0.005) {
         const sign = d > 0 ? "+" : "";
@@ -419,7 +450,11 @@ export function recommend(
       if (!ally.champion) continue;
       const ss = stats.synergy_stats[synergyKey(champ, ally.champion)];
       if (ss && ss.games >= MIN_SYNERGY_GAMES) {
-        const d = shrunkDelta(ss.winrate, ss.games);
+        const allyGames =
+          stats.champion_role_stats[key2(ally.champion, ally.role)]?.games ?? 0;
+        const allyMeta = metaFactor(allyGames, totals[ally.role]);
+        const pairMeta = Math.min(factor, allyMeta);
+        const d = shrunkDelta(ss.winrate, ss.games) * pairMeta;
         synergyDelta += d;
         if (Math.abs(d) >= 0.01) {
           const sign = d > 0 ? "+" : "";
