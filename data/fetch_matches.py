@@ -2,8 +2,9 @@ import os
 import time
 import json
 import sqlite3
-import requests
+import requests  # noqa: F401 — kept for compatibility; get_with_retry wraps it
 from dotenv import load_dotenv
+from riot_api import get_with_retry
 
 load_dotenv()
 api_key = os.getenv("RIOT_API_KEY")
